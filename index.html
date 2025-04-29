@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falling Sand</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+  <!-- style intersezione -->
+  <style>
+    #interstitial {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+    }
+    #interstitial button {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>FALLING SAND GENERATOR</h1>
+    </header>
+    
+    <main>
+      <div class="canvas-container">
+        <div id="canvas-wrapper"></div>
+        <div id="interstitial" class="instructions">
+          <p>Click and drag to create colored sand particles</p>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <button onclick="continueDownload()" id="download-btn">DOWNLOAD BACKGROUND</button>
+      </div>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 Falling Sand Generator - 90's Minimalist Design</p>
+    </footer>
+  </div>
+  
+  <!-- script per intersezione -->
+  <!-- <script>
+    function showInterstitial() {
+      document.getElementById('interstitial').style.display = 'flex';
+      // Potrei anche aprire un link pubblicitario reale:
+      //window.open('https://link-a-pubblicita.com', '_blank');
+    }
+
+    function continueDownload() {
+      document.getElementById('interstitial').style.display = 'none';
+      // Avvio del download
+      window.location.href = 'wallpaper-generato.jpg'; // sostituzione file dinamico
+    }
+  </script> -->
+  <script src="sandfall.js"></script>
+</body>
+</html>

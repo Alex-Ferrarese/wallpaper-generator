@@ -1,0 +1,110 @@
+/* 90's minimalist style */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'VT323', monospace;
+  background-color: #008080; /* Typical 90's teal color */
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #000080; /* Dark blue */
+  border: 4px solid #ffffff;
+  box-shadow: 8px 8px 0 #000000;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  border-bottom: 4px solid #ffffff;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 #ff00ff; /* Magenta shadow */
+}
+
+main {
+  padding: 20px;
+}
+
+.canvas-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#canvas-wrapper {
+  display: inline-block;
+  background-color: #000000;
+  border: 4px solid #ffffff;
+  margin: 0 auto 20px;
+}
+
+.instructions {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #ffff00; /* Yellow */
+}
+
+.controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+button {
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  background-color: #ff00ff; /* Magenta */
+  color: #ffffff;
+  border: 4px solid #ffffff;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 0 #000000;
+  transition: all 0.1s;
+}
+
+button:hover {
+  background-color: #00ffff; /* Cyan */
+  color: #000000;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000000;
+}
+
+button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #000000;
+  border-top: 4px solid #ffffff;
+  font-size: 0.9rem;
+}
+
+/* Style for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  
+  #canvas-wrapper canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
