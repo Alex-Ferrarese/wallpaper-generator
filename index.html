@@ -1,74 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Falling Sand</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 
-  <!-- style intersezione -->
-  <style>
-    #interstitial {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 24px;
-    }
-    #interstitial button {
-      margin-top: 20px;
-      font-size: 18px;
-    }
-  </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Sand</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+    <!-- Adsterra script -->
+    <script type='text/javascript'
+        src='https://www.profitableratecpm.com/v3fpjxphx?key=cfc7fdbbbf0dea1855636c434f94d58e'></script>
+
+    <!-- style intersezione -->
+    <style>
+        #interstitial {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        #interstitial button {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
 
 </head>
-<body>
-  <div class="container">
-    <header>
-      <h1>FALLING SAND GENERATOR</h1>
-    </header>
-    
-    <main>
-      <div class="canvas-container">
-        <div id="canvas-wrapper"></div>
-        <div id="interstitial" class="instructions">
-          <div class="instructions-content">
-            <p>Click and drag to create colored sand particles</p>
-            <button onclick="document.getElementById('interstitial').style.display = 'none'">Inizia</button>
-          </div>
-        </div>
-      </div>
-      
-      <div class="controls">
-        <button onclick="downloadCanvas()" id="download-btn">DOWNLOAD BACKGROUND</button>
-      </div>
-    </main>
-    
-    <footer>
-      <p>&copy; 2025 Falling Sand Generator - 90's Minimalist Design</p>
-    </footer>
-  </div>
-  
-  <!-- script per intersezione -->
-  <!-- <script>
-    function showInterstitial() {
-      document.getElementById('interstitial').style.display = 'flex';
-      // Potrei anche aprire un link pubblicitario reale:
-      //window.open('https://link-a-pubblicita.com', '_blank');
-    }
 
-    function continueDownload() {
-      document.getElementById('interstitial').style.display = 'none';
-      // Avvio del download
-      window.location.href = 'wallpaper-generato.jpg'; // sostituzione file dinamico
-    }
-  </script> -->
-  <script src="sandfall.js"></script>
+<body>
+    <div class="container">
+        <header>
+            <h1>FALLING SAND GENERATOR</h1>
+        </header>
+
+        <main>
+            <div class="canvas-container">
+                <div id="canvas-wrapper"></div>
+                <div id="interstitial" class="instructions">
+                    <div class="instructions-content">
+                        <p>Click and drag to create colored sand particles</p>
+                        <button onclick="document.getElementById('interstitial').style.display = 'none'">Start</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button onclick="downloadCanvas()" id="download-btn">DOWNLOAD BACKGROUND</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Falling Sand Generator - 90's Minimalist Design - github: Alex Ferrarese</p>
+        </footer>
+    </div>
+
+
+    <script src="sandfall.js"></script>
 </body>
+
 </html>

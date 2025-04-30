@@ -44,16 +44,16 @@ function setup() {
 
     // Add event listener for the download button
     document.getElementById('download-btn').addEventListener('click', downloadCanvas);
-    
+
     // Prevent scrolling on mobile when interacting with canvas
     const canvasElement = document.querySelector('#canvas-wrapper canvas');
-    canvasElement.addEventListener('touchmove', function(e) {
+    canvasElement.addEventListener('touchmove', function (e) {
         e.preventDefault();
     }, { passive: false });
-    
+
     // Show interstitial on startup
     document.getElementById('interstitial').style.display = 'flex';
-    
+
     // Add touch event handlers for mobile
     canvasElement.addEventListener('touchstart', handleTouch);
     canvasElement.addEventListener('touchmove', handleTouch);
@@ -63,7 +63,7 @@ function setup() {
 function handleTouch(e) {
     // Prevent default behavior
     e.preventDefault();
-    
+
     // Get touch position
     if (e.touches.length > 0) {
         const touch = e.touches[0];
@@ -173,6 +173,10 @@ function draw() {
 
 // Function to download the canvas as an image
 function downloadCanvas() {
+
+    // show ads
+    window.open('https://www.profitableratecpm.com/v3fpjxphx?key=cfc7fdbbbf0dea1855636c434f94d58e', '_blank');
+
     // Create a temporary element for download
     let link = document.createElement('a');
     link.download = 'falling-sand-creation.png';
@@ -184,6 +188,7 @@ function downloadCanvas() {
     // Simulate a click to start the download
     document.body.appendChild(link);
     link.click();
+
     // Clean up the temporary link
     // Add a small delay before removing the link
     setTimeout(() => {
