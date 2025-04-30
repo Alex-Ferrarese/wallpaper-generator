@@ -44,6 +44,34 @@ function setup() {
 
     // Add event listener for the download button
     document.getElementById('download-btn').addEventListener('click', downloadCanvas);
+    
+    // Prevent scrolling on mobile when interacting with canvas
+    const canvasElement = document.querySelector('#canvas-wrapper canvas');
+    canvasElement.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+    
+    // Show interstitial on startup
+    document.getElementById('interstitial').style.display = 'flex';
+    
+    // Add touch event handlers for mobile
+    canvasElement.addEventListener('touchstart', handleTouch);
+    canvasElement.addEventListener('touchmove', handleTouch);
+}
+
+// Handle touch events for mobile
+function handleTouch(e) {
+    // Prevent default behavior
+    e.preventDefault();
+    
+    // Get touch position
+    if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        const rect = e.target.getBoundingClientRect();
+        mouseX = touch.clientX - rect.left;
+        mouseY = touch.clientY - rect.top;
+        mouseIsPressed = true;
+    }
 }
 
 function mouseDragged() { }
@@ -156,5 +184,15 @@ function downloadCanvas() {
     // Simulate a click to start the download
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link);
+    // Clean up the temporary link
+    // Add a small delay before removing the link
+    setTimeout(() => {
+        document.body.removeChild(link);
+    }, 100); // 100ms delay
+}
+
+// Function to continue download (for interstitial)
+function continueDownload() {
+    document.getElementById('interstitial').style.display = 'none';
+    downloadCanvas();
 }

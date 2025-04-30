@@ -38,12 +38,15 @@
       <div class="canvas-container">
         <div id="canvas-wrapper"></div>
         <div id="interstitial" class="instructions">
-          <p>Click and drag to create colored sand particles</p>
+          <div class="instructions-content">
+            <p>Click and drag to create colored sand particles</p>
+            <button onclick="document.getElementById('interstitial').style.display = 'none'">Inizia</button>
+          </div>
         </div>
       </div>
       
       <div class="controls">
-        <button onclick="continueDownload()" id="download-btn">DOWNLOAD BACKGROUND</button>
+        <button onclick="downloadCanvas()" id="download-btn">DOWNLOAD BACKGROUND</button>
       </div>
     </main>
     
